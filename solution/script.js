@@ -66,3 +66,5 @@ clearButton.addEventListener("click", function() {
 
   console.log("All cleared!");
 });
+
+//done
