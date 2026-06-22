@@ -69,7 +69,9 @@ generateButton.addEventListener("click", function() {
   // Follow the same pattern: let ____ = document.querySelector("#____").value;
 
   // Your code here:
-
+let verb = document.querySelector("verb").value;
+let place = document.querySelector("place").value;
+let number = document.querySelector("number").value;
 
 
   // **********************************************************
@@ -78,6 +80,9 @@ generateButton.addEventListener("click", function() {
   // Use console.log() to check your values, just like we did above
 
   // Your code here:
+console.log("verb:", verb);
+console.log("place:", place);
+console.log("number:", number);
 
 
 
@@ -88,13 +93,10 @@ generateButton.addEventListener("click", function() {
   // Use a template literal like we did for firstSentence.
   //
   // The full story is:
-  // "Deep inside the codebase lives a [adjective] bug that's been
-  // hiding for [number] days. [Name] grabs their debugger and
-  // ventures into [place] to hunt it down, only to discover the
-  // bug can [verb] and has been disguising itself as an innocent
-  // [noun] the whole time."
+  // "Deep inside the codebase lives a [adjective] bug that's been hiding for [number] days. [Name] grabs their debugger and ventures into [place] to hunt it down, only to discover the bug can [verb] and has been disguising itself as an innocent [noun] the whole time."
 
   // Your code here (replace firstSentence with your full story):
+let fullstory = `Deep inside the codebase lives a ${adjective} bug that's been hiding for ${number} days. ${Name} grabs their debugger and ventures into ${place} to hunt it down, only to discover the bug can [verb] and has been disguising itself as an innocent [noun] the whole time.`
 
 
 
@@ -104,8 +106,9 @@ generateButton.addEventListener("click", function() {
   // Update the innerHTML to show your complete story
   // (You might have already done this in Step 3 - that's fine!)
 
-  // Your code here:
+ // Your code here:
 
+document.querySelector("#story").innerHTML=fullstory;
 
 });
 
@@ -125,6 +128,19 @@ generateButton.addEventListener("click", function() {
 // 2. Add a click event listener
 // 3. Set each input's .value to ""
 // 4. Clear the story output too
+
+let clearButton = document. querySelector("#clear");
+clearButton. addEventListener("click", () => {
+document. queryselector ("#name"). value = "";
+document. querySelector("#adjective"). value = "";
+document. querySelector("#noun"). value = "";
+document. querySelector("#verb"). value = "";
+document. querySelector("#place"). value = "";
+document. queryselector ("#number"). value = "";
+});
+
+
+
 
 
 // STRETCH 3: Use Number() with the number input
